@@ -6,8 +6,15 @@ const config: Config = {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '128': '32rem', 
+        '144': '36rem', 
+        '160': '40rem', 
+      },
+    },
   },
+
   plugins: [],
 };
 

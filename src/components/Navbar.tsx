@@ -1,11 +1,24 @@
 import { Link } from 'react-router-dom';
 import { Search, Mail, Pizza } from 'lucide-react';
+import { IoLogoLinkedin, IoLogoInstagram, IoLogoGithub, IoLogoWhatsapp } from 'react-icons/io5';
 
 const Navbar = () => {
   return (
     <div className="sticky top-0 z-50">
-      <header className="bg-[#CE372D] text-white py-2 px-4">
+      <header className="bg-[#CE372D] text-white py-3 px-4">
         <div className="container mx-auto flex justify-end space-x-6 items-center">
+          <Link to="/" className='hover:text-gray-200 flex items-center gap-2'>
+            <IoLogoLinkedin size={18} />
+            </Link>
+            <Link to="/" className='hover:text-gray-200 flex items-center gap-2'>
+            <IoLogoInstagram size={18} />
+            </Link>
+            <Link to="/" className='hover:text-gray-200 flex items-center gap-2'>
+            <IoLogoGithub size={18} />
+            </Link>
+            <Link to="/" className='hover:text-gray-200 flex items-center gap-2'>
+            <IoLogoWhatsapp size={18} />
+            </Link>
           <Link to="/buscar" className="hover:text-gray-200 flex items-center gap-2">
             <Search size={18} />
             <span>BUSCAR</span>
