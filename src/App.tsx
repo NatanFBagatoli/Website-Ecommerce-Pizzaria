@@ -7,6 +7,7 @@ import Pedido from "./pages/Pedido";
 import Contato from "./pages/Contato";
 import Franquiado from "./pages/Franquiado";
 
+
 function App() {
   
   return (
