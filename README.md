@@ -1,54 +1,74 @@
-# React + TypeScript + Vite
+# 📌 Projeto E-Commerce Pizzaria 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Desenvolvimento de um site dinâmico e estratégico para uma pizzaria, com foco na divulgação de cardápio, promoções, franquias e oportunidades de trabalho. O projeto foi planejado para atender às demandas específicas da pizzaria, destacando seus sabores únicos, qualidade dos ingredientes e a experiência de sabor que oferece aos clientes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias
 
-## Expanding the ESLint configuration
+Este projeto foi desenvolvido com as seguintes tecnologias:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ⚡ Vite
+- 🟦 TypeScript
+- ⚛️ React, React Router
+- 🎨 Lucide React, React Icons
+- 💠 Tailwind CSS
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📷 Demonstração
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 🏫 Página Inicial
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+
+### 📚 Página de Unidades
+
+
+### 📊 Página de Cardápio
+
+
+### 📱 Link para o site
+
+---
+
+## 🔧 Instalação e Uso
+
+Siga os passos abaixo para rodar o projeto localmente:
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   ```
+2. **Acesse a pasta do projeto:**
+   ```bash
+   cd nome-do-repositorio
+   ```
+3. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+   ou
+   ```bash
+   yarn install
+   ```
+4. **Inicie o projeto:**
+   ```bash
+   npm run dev
+   ```
+   ou
+   ```bash
+   yarn dev
+   ```
+
+---
+
+## 📄 Features
+
+- ✅ Estrutura responsiva e moderna
+- ✅ Interface intuitiva e atraente
+- 🔜 Documentação de código
+- 🔜 Correção de bugs
+- 🔜 Melhorias contínuas
+
+---
+
