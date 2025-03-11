@@ -26,6 +26,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ### 📊 Página de Cardápio
 
+![cardapio](https://github.com/user-attachments/assets/b2ef6ad0-2723-4cd6-9a77-9340b658012a)
 
 ### 📱 Link para o site
 

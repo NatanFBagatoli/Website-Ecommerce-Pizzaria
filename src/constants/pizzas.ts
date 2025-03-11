@@ -4,18 +4,23 @@ export interface Pizza {
     ingredientes: string;
     imagem: string;
     preco: string;
-    unidades: string;
+    estado: string;
+    cidade: string;
+    isNew?: boolean;
+    isPopular?: boolean;
 }
 
 export const pizzas: Pizza[] = [
-    // Pizzas já existentes
+
     {
         nome: "CALABRESA",
         categoria: "PIZZAS",
         ingredientes: "Mussarela e calabresa fatiada",
         imagem: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 59,90",
-        unidades: "SP"
+        estado: "SC",
+        cidade: "Blumenau",
+        isPopular: true
     },
     {
         nome: "MUSSARELA",
@@ -23,7 +28,9 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela, provolone, parmesão e catupiry",
         imagem: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 64,90",
-        unidades: "SP"
+        estado: "SC",
+        cidade: "Blumenau",
+        isPopular: true
     },
     {
         nome: "CHOCOLATE",
@@ -31,7 +38,9 @@ export const pizzas: Pizza[] = [
         ingredientes: "Um toque de mussarela, chocolate meio amargo e leite condensado",
         imagem: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 54,90",
-        unidades: "SP"
+        estado: "SC",
+        cidade: "Blumenau",
+        isPopular: true
     },
     {
         nome: "ALHO E ÓLEO",
@@ -39,7 +48,9 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela e alho frito",
         imagem: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 49,90",
-        unidades: "SP"
+        estado: "SC",
+        cidade: "Blumenau",
+        isPopular: true
     },
     {
         nome: "CALABRESA COM CEBOLA",
@@ -47,7 +58,9 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela, calabresa fatiada e cebola",
         imagem: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 59,90",
-        unidades: "SP"
+        estado: "SC",
+        cidade: "Blumenau",
+        isNew: true
     },
     {
         nome: "FRANGO COM CATUPIRY",
@@ -55,7 +68,9 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela, frango temperado e catupiry",
         imagem: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 64,90",
-        unidades: "SP"
+        estado: "SC",
+        cidade: "Blumenau",
+        isNew: true
     },
     {
         nome: "PORTUGUESA",
@@ -63,7 +78,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela, presunto, cebola, ovo e azeitona verde",
         imagem: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 54,90",
-        unidades: "SP"
+        estado: "SC",
+        cidade: "Blumenau",
     },
     {
         nome: "CAPRESE TRADICIONAL",
@@ -71,7 +87,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela, mussarela de búfala bola, tomate fatiado, pesto de azeitonas pretas e manjericão fresco",
         imagem: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 49,90",
-        unidades: "SP"
+        estado: "SC",
+        cidade: "Blumenau",
     },
     {
         nome: "ATUM",
@@ -79,7 +96,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela, atum, cebola fatiada e azeitona preta",
         imagem: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 59,90",
-        unidades: "SP"
+        estado: "RS",
+        cidade: "Santa Cruz do Sul"
     },
     {
         nome: "MARGUERITA",
@@ -87,7 +105,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela, tomate fatiado e manjericão fresco",
         imagem: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 64,90",
-        unidades: "SP"
+        estado: "RS",
+        cidade: "Santa Cruz do Sul"
     },
     {
         nome: "CHOCOLATE COM MORANGO",
@@ -95,7 +114,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Um toque de mussarela, chocolate meio amargo, morango e leite condensado",
         imagem: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 54,90",
-        unidades: "SP"
+        estado: "RS",
+        cidade: "Santa Cruz do Sul"
     },
     {
         nome: "MILHO",
@@ -103,7 +123,9 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela e milho verde",
         imagem: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 49,90",
-        unidades: "SP"
+        estado: "RS",
+        cidade: "Santa Cruz do Sul"
+
     },
 
     {
@@ -112,7 +134,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Chocolate, caramelo e amendoim",
         imagem: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 64,90",
-        unidades: "SP"
+        estado: "RS",
+        cidade: "Santa Cruz do Sul"
 
     },
     {
@@ -121,7 +144,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela, brócolis e catupiry",
         imagem: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 64,90",
-        unidades: "SP"
+        estado: "RS",
+        cidade: "Santa Cruz do Sul"
     },
     {
         nome: "PEPPERONI",
@@ -129,7 +153,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela e pepperoni",
         imagem: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 69,90",
-        unidades: "SP"
+        estado: "RS",
+        cidade: "Santa Cruz do Sul"
     },
     {
         nome: "VEGETARIANA",
@@ -137,7 +162,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela, tomate, pimentão, cebola, azeitona e milho",
         imagem: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 59,90",
-        unidades: "SP"
+        estado: "RS",
+        cidade: "Santa Cruz do Sul"
     },
     {
         nome: "BACON",
@@ -145,7 +171,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela e bacon",
         imagem: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 64,90",
-        unidades: "SP"
+        estado: "PR",
+        cidade: "Curitiba"
     },
     {
         nome: "FRANGO COM CHEDDAR",
@@ -153,7 +180,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela, frango temperado e cheddar",
         imagem: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 64,90",
-        unidades: "SP"
+        estado: "PR",
+        cidade: "Curitiba"
     },
     {
         nome: "NAPOLITANA",
@@ -161,7 +189,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela, tomate, parmesão e manjericão",
         imagem: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 59,90",
-        unidades: "SP"
+        estado: "PR",
+        cidade: "Curitiba"
     },
     {
         nome: "CAMARÃO",
@@ -169,7 +198,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela, camarão e catupiry",
         imagem: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 89,90",
-        unidades: "SP"
+        estado: "PR",
+        cidade: "Curitiba"
     },
     {
         nome: "RÚCULA COM TOMATE SECO",
@@ -177,7 +207,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela, rúcula e tomate seco",
         imagem: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 69,90",
-        unidades: "SP"
+        estado: "PR",
+        cidade: "Curitiba"
     },
     {
         nome: "CARNE SECA",
@@ -185,7 +216,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela, carne seca e cebola",
         imagem: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 64,90",
-        unidades: "SP"
+        estado: "PR",
+        cidade: "Curitiba"
     },
     {
         nome: "PALMITO",
@@ -193,7 +225,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Mussarela e palmito",
         imagem: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 59,90",
-        unidades: "SP"
+        estado: "PR",
+        cidade: "Curitiba"
     },
     {
         nome: "BANANA COM CANELA",
@@ -201,7 +234,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Banana, canela e leite condensado",
         imagem: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 49,90",
-        unidades: "SP"
+        estado: "PR",
+        cidade: "Curitiba"
     },
     {
         nome: "ROMEU E JULIETA",
@@ -209,7 +243,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Goiabada e queijo mussarela",
         imagem: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 54,90",
-        unidades: "SP"
+        estado: "PR",
+        cidade: "Curitiba"
     },
     {
         nome: "PRESTÍGIO",
@@ -217,7 +252,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Chocolate, coco ralado e leite condensado",
         imagem: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 54,90",
-        unidades: "SP"
+        estado: "PR",
+        cidade: "Curitiba"
     },
     {
         nome: "SENSACIONAL",
@@ -225,7 +261,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Chocolate, morango, banana e leite condensado",
         imagem: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 59,90",
-        unidades: "SP"
+        estado: "PR",
+        cidade: "Curitiba"
     },
     {
         nome: "DOIS AMORES",
@@ -233,7 +270,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Chocolate branco, chocolate preto e leite condensado",
         imagem: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 54,90",
-        unidades: "SP"
+        estado: "PR",
+        cidade: "Curitiba"
     },
     {
         nome: "ABACAXI COM CANELA",
@@ -241,7 +279,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Abacaxi, canela e leite condensado",
         imagem: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 49,90",
-        unidades: "SP"
+        estado: "RS",
+        cidade: "Santa Cruz do Sul"
     },
     {
         nome: "BRIGADEIRO",
@@ -249,7 +288,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Chocolate e granulado",
         imagem: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 54,90",
-        unidades: "SP"
+        estado: "RS",
+        cidade: "Santa Cruz do Sul"
     },
     {
         nome: "BEIJINHO",
@@ -257,7 +297,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Coco ralado e leite condensado",
         imagem: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 49,90",
-        unidades: "SP"
+        estado: "RS",
+        cidade: "Santa Cruz do Sul"
     },
     {
         nome: "MORANGO COM NUTELLA",
@@ -265,7 +306,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Nutella e morango",
         imagem: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 69,90",
-        unidades: "SP"
+        estado: "RS",
+        cidade: "Santa Cruz do Sul"
     },
     {
         nome: "DOCE DE LEITE",
@@ -273,7 +315,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Doce de leite e coco ralado",
         imagem: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 54,90",
-        unidades: "SP"
+        estado: "SC",
+        cidade: "Blumenau",
     },
     {
         nome: "PAÇOCA",
@@ -281,7 +324,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Paçoca e leite condensado",
         imagem: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 54,90",
-        unidades: "SP"
+        estado: "SC",
+        cidade: "Blumenau",
     },
     {
         nome: "OVOMALTINE",
@@ -289,7 +333,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Chocolate e Ovomaltine",
         imagem: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 59,90",
-        unidades: "SP"
+        estado: "SC",
+        cidade: "Blumenau",
     },
     {
         nome: "KIT KAT",
@@ -297,7 +342,8 @@ export const pizzas: Pizza[] = [
         ingredientes: "Chocolate e Kit Kat",
         imagem: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         preco: "R$ 64,90",
-        unidades: "SP"
+        estado: "SC",
+        cidade: "Blumenau",
     },
 
 ];
