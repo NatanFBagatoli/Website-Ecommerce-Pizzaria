@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Search, Mail, Pizza } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { IoLogoLinkedin, IoLogoInstagram, IoLogoGithub, IoLogoWhatsapp } from 'react-icons/io5';
 
 const Navbar = () => {
@@ -19,13 +19,9 @@ const Navbar = () => {
             <Link to="/" className='hover:text-gray-200 flex items-center gap-2'>
             <IoLogoWhatsapp size={18} />
             </Link>
-          <Link to="/buscar" className="hover:text-gray-200 flex items-center gap-2">
-            <Search size={18} />
-            <span>BUSCAR</span>
-          </Link>
-          <Link to="/email" className="hover:text-gray-200 flex items-center gap-2">
+          
+          <Link to="/" className="hover:text-gray-200 flex items-center gap-2">
             <Mail size={18} />
-            <span>E-MAIL</span>
           </Link>
         </div>
       </header>
@@ -43,9 +39,9 @@ const Navbar = () => {
             </Link>
           </div>
           
-          <Link to="/" className="flex items-center gap-2 text-[#692823] text-2xl font-bold">
-            <Pizza size={32} className="text-[#CE372D]" />
-            <span>PIZZARIA BAGATOLI</span>
+          <Link to="/" className="luckiest-guy-regular transform hover:scale-105 transition-all flex items-center gap-2 text-[#CE372D] text-4xl font-bold">
+            
+            <span>PIZZARIA <span className='text-[#164615]'>BAGATOLI</span></span>
           </Link>
           
           <div className="flex space-x-6 items-center">
@@ -57,7 +53,7 @@ const Navbar = () => {
             </Link>
             <Link 
               to="/franquiado" 
-              className="bg-[#F4D03F] text-[#602A26] font-semibold px-6 py-2 rounded-full hover:bg-[#F1C40F] transition-colors shadow-md hover:shadow-lg"
+              className="bg-[#F4D03F] text-[#602A26] font-semibold px-6 py-2 rounded-full hover:bg-[#F1C40F] transition-colors transform hover:scale-105 shadow-md hover:shadow-lg"
             >
               SEJA FRANQUEADO
             </Link>

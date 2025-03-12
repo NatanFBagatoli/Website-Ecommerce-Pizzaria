@@ -43,7 +43,7 @@ const Cardapio = () => {
         'PR': ['Curitiba'],
     };
 
-    // Fechar o menu de categorias ao clicar fora dele
+   
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             const menu = document.querySelector('.category-menu');
@@ -69,7 +69,7 @@ const Cardapio = () => {
                     }}
                 >
                     <div className="absolute bg-black bg-opacity-50 inset-0 flex items-center justify-center">
-                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">NOSSO<span className="text-[#CE372D]"> CARDÁPIO</span></h1>
+                        <h1 className="rubik-dirt-regular transform hover:scale-105 transition-all text-5xl md:text-7xl font-bold text-white mb-6">NOSSO<span className="text-[#CE372D]"> CARDÁPIO</span></h1>
                     </div>
                 </section>
 
@@ -81,7 +81,7 @@ const Cardapio = () => {
                                 setSelectedState(e.target.value);
                                 setSelectedCity('');
                             }}
-                            className="flex-1 p-2 border rounded-md"
+                            className="transform hover:scale-105 transition-all flex-1 p-2 border rounded-md"
                         >
                             <option value="">Selecione um Estado</option>
                             <option value="RS">Rio Grande do Sul</option>
@@ -91,7 +91,7 @@ const Cardapio = () => {
                         <select
                             value={selectedCity}
                             onChange={(e) => setSelectedCity(e.target.value)}
-                            className="flex-1 p-2 border rounded-md"
+                            className="transform hover:scale-105 transition-all flex-1 p-2 border rounded-md"
                             disabled={!selectedState}
                         >
                             <option value="">Selecione uma Cidade</option>
@@ -109,7 +109,7 @@ const Cardapio = () => {
                                 setActiveFilter(null);
                                 setSearchTerm('');
                                 setSelectedCategory(null);
-                                setIsCategoryMenuOpen(false); // Fechar o menu de categorias ao limpar
+                                setIsCategoryMenuOpen(false); 
                             }}
                             className="px-4 py-2 border font-extrabold border-[#CE372D] text-[#CE372D] rounded-md flex items-center gap-2 hover:bg-[#CE372D] hover:text-white transition-colors"
                         >
@@ -125,9 +125,9 @@ const Cardapio = () => {
                                     onClick={() => {
                                         setActiveFilter(filter as any);
                                         if (filter === 'CATEGORIAS') {
-                                            setIsCategoryMenuOpen(true); // Abrir o menu de categorias
+                                            setIsCategoryMenuOpen(true); 
                                         } else {
-                                            setIsCategoryMenuOpen(false); // Fechar o menu de categorias
+                                            setIsCategoryMenuOpen(false); 
                                         }
                                     }}
                                     className={`px-4 py-2 rounded-md transition-colors ${activeFilter === filter
@@ -140,14 +140,14 @@ const Cardapio = () => {
                             ))}
                         </div>
 
-                        {isCategoryMenuOpen && ( // Exibir o menu de categorias apenas se isCategoryMenuOpen for true
+                        {isCategoryMenuOpen && ( 
                             <div className="absolute top-11 left-128 bg-white border rounded-md shadow-lg p-4 z-10 category-menu">
                                 <ul className="flex flex-col gap-2">
                                     <li>
-                                        <button
+                                        <button 
                                             onClick={() => {
                                                 setSelectedCategory('PIZZAS DOCES');
-                                                setIsCategoryMenuOpen(false); // Fechar o menu de categorias
+                                                setIsCategoryMenuOpen(false); 
                                             }}
                                             className={`px-4 py-2 rounded-md transition-colors ${selectedCategory === 'PIZZAS DOCES'
                                                 ? 'bg-[#CE372D] text-white'
@@ -161,7 +161,7 @@ const Cardapio = () => {
                                         <button
                                             onClick={() => {
                                                 setSelectedCategory('PIZZAS');
-                                                setIsCategoryMenuOpen(false); // Fechar o menu de categorias
+                                                setIsCategoryMenuOpen(false); 
                                             }}
                                             className={`px-4 py-2 rounded-md transition-colors ${selectedCategory === 'PIZZAS'
                                                 ? 'bg-[#CE372D] text-white'
@@ -175,7 +175,7 @@ const Cardapio = () => {
                             </div>
                         )}
 
-                        <div className="ml-auto relative">
+                        <div className="ml-auto relative transform hover:scale-105 transition-all">
                             <input
                                 type="text"
                                 placeholder="BUSCAR"
@@ -189,15 +189,15 @@ const Cardapio = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {currentPizzas.map((pizza, index) => (
-                            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden relative">
+                            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden relative transform hover:scale-105 transition-all">
                                 {pizza.isNew && (
                                     <div className="absolute top-4 left-4 bg-[#CE372D] text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                        NOVO
+                                       ✨ NOVO
                                     </div>
                                 )}
                                 {pizza.isPopular && (
                                     <div className="absolute top-4 right-4 bg-[#F4D03F] text-[#602A26] px-3 py-1 rounded-full text-sm font-semibold">
-                                        MAIS PEDIDA
+                                        ⭐ MAIS PEDIDA 
                                     </div>
                                 )}
                                 <img
@@ -210,10 +210,10 @@ const Cardapio = () => {
                                     <h3 className="text-lg text-[#CE372D] font-bold mb-2">{pizza.nome}</h3>
                                     <p className="text-[#602A26] text-sm mb-4 h-20 overflow-hidden">{pizza.ingredientes}</p>
                                     <div className="flex items-center justify-between">
-                                        <span className="text-[#CE372D] font-bold">{pizza.preco}</span>
+                                        <span className="text-[#CE372D] text-xl font-bold">{pizza.preco}</span>
                                         <Link
                                             to="/pedido"
-                                            className="bg-[#CE372D] text-white px-4 py-2 rounded-md hover:bg-[#B32D24] transition-colors"
+                                            className="bg-[#CE372D] text-white px-7 py-3 rounded-md hover:bg-[#B32D24] transition-colors"
                                         >
                                             Pedir
                                         </Link>

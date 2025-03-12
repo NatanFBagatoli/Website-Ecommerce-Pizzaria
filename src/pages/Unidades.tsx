@@ -61,7 +61,7 @@ const Unidades = () => {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                         {currentUnidades.map((unidade, index) => (
-                            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div key={index} className="transform hover:scale-105 transition-all bg-white rounded-lg shadow-lg overflow-hidden">
                                 <img
                                     src={unidade.image}
                                     alt={unidade.name}
@@ -69,7 +69,9 @@ const Unidades = () => {
                                 />
                                 <div className="p-4 text-center">
                                     <h3 className="text-xl text-[#602A26] font-bold">{unidade.name}</h3>
+                                    
                                 </div>
+                                
                             </div>
                         ))}
                     </div>

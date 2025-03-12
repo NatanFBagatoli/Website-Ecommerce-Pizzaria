@@ -4,9 +4,13 @@ import Sobrenos from "./pages/Sobrenos";
 import Unidades from "./pages/Unidades";
 import Cardapio from "./pages/Cardapio";
 import Pedido from "./pages/Pedido";
-import Contato from "./pages/Contato";
 import Franquiado from "./pages/Franquiado";
-
+import Aguaverde from "./pages/cidades/Aguaverde";
+import Centro from "./pages/cidades/Centro";
+import Fortaleza from "./pages/cidades/Fortaleza";
+import Velha from "./pages/cidades/Velha";
+import Entrecontato from "./pages/Entrecontato";
+import Trabalheconosco from "./pages/Trabalheconosco";
 
 function App() {
   
@@ -18,8 +22,13 @@ function App() {
 <Route path="/unidades" element={<Unidades />} />
 <Route path="/cardapio" element={<Cardapio />} />
 <Route path="/pedido" element={<Pedido />} />
-<Route path="/contato" element={<Contato />} />
 <Route path="/franquiado" element={<Franquiado />} />
+<Route path="/unidades/aguaverde" element={<Aguaverde />} />
+<Route path="/unidades/centro" element={<Centro />} />
+<Route path="/unidades/fortaleza" element={<Fortaleza />} />
+<Route path="/unidades/velha" element={<Velha />} />
+<Route path="/entreemcontato" element={<Entrecontato />} />
+<Route path="/trabalheconosco" element={<Trabalheconosco />} />
 </Routes>
 </BrowserRouter>
   );

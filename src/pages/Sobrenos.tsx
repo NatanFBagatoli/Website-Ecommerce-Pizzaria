@@ -2,8 +2,23 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { IoTimerOutline, IoPizzaOutline, IoStorefrontOutline } from "react-icons/io5";
+import { useInView } from "../hooks/useInView";
+import CountUp from "react-countup";
+
 const Sobrenos = () => {
+  const [statsRef, statsInView] = useInView({
+    threshold: 0.3,
+    triggerOnce: true
+  });
+  const status = [
+    {  number: 10, text: "Anos de História", prefix: "+"},
+    {  number: 20, text: "Unidades", prefix: "+" },
+    {  number: 1000, text: "Clientes Satisfeitos", prefix: "+" },
+    {  number: 57, text: "Sabores Exclusivos", prefix: "+" }
+  ];
+
     return(
+      
         <div>
          <Navbar />
          <div className="min-h-screen bg-white">
@@ -13,7 +28,7 @@ const Sobrenos = () => {
           }}>
                   
           </section>
-        
+       
           <section className="py-16 bg-[#CE372D]">
                     <div className="container mx-auto px-4">
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -42,7 +57,30 @@ const Sobrenos = () => {
 
         </section>
         <section className="py-24 bg-[#ECE5D7]">
-
+        <div className="container mx-auto px-4 -mt-16 relative z-10">
+        <div ref={statsRef} className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {status.map((stat, index) => (
+            <div key={index} className="bg-white rounded-xl p-8 shadow-xl text-center transform hover:scale-105 transition-all">
+            
+              <h3 className="text-4xl font-bold mb-2">
+                <span className="inline-flex">
+                  {statsInView && (
+                    <CountUp
+                      start={0}
+                      end={stat.number}  
+                      duration={2.5}
+                      separator="."
+                      prefix={stat.prefix}
+                      useEasing={true}
+                    />
+                  )}
+                </span>
+              </h3>
+              <p className="text-gray-600">{stat.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
         </section>
         <section className="py-24 bg-[#FFFAF0]">
 
