@@ -8,6 +8,10 @@ const config: Config = {
   theme: {
     extend: {
       spacing: {
+        '18': '4.5rem',
+        '66': '16.5rem',
+        '67': '16.75rem',
+        '68': '17.25rem',
         '86': '21.5rem',
         '90': '22.5rem',
         '92': '23rem',

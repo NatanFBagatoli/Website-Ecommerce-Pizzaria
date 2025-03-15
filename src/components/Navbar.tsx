@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-50">
       <header className="bg-[#CE372D] text-white py-3 px-4">
-        <div className="container mx-auto flex justify-end space-x-6 items-center">
+        <div className="container mx-auto flex justify-center space-x-6 items-center">
           <Link to="/" className='hover:text-gray-200 flex items-center gap-2'>
             <IoLogoLinkedin size={18} />
             </Link>
@@ -26,13 +26,13 @@ const Navbar = () => {
         </div>
       </header>
       <nav className="bg-[#FFFAF0] shadow-md py-4">
-        <div className="container mx-auto flex items-center justify-between px-4">
+        <div className="container mx-67 flex items-center justify-between">
           <div className="flex space-x-6">
             <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
               SOBRE NÓS
             </Link>
             <Link to="/unidades" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-              NOSSAS UNIDADES
+              UNIDADES
             </Link>
             <Link to="/cardapio" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
               CARDÁPIO
@@ -41,7 +41,7 @@ const Navbar = () => {
           
           <Link to="/" className="luckiest-guy-regular transform hover:scale-105 transition-all flex items-center gap-2 text-[#CE372D] text-4xl font-bold">
             
-            <span>PIZZARIA <span className='text-[#164615]'>BAGATOLI</span></span>
+            <span>PIZZARIA <span className='text-[#164615] '>BAGATOLI</span></span>
           </Link>
           
           <div className="flex space-x-6 items-center">
@@ -49,7 +49,7 @@ const Navbar = () => {
               PEDIR ONLINE
             </Link>
             <Link to="/contato" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-              FALE CONOSCO
+             FALE CONOSCO
             </Link>
             <Link 
               to="/franquiado" 
