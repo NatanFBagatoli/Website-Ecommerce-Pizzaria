@@ -38,7 +38,7 @@ const Home = () => {
           style={{
             backgroundImage: 'url("https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")'
           }}>
-          <div className="absolute inset-0 bg-black bg-opacity-50" />
+          <div className="absolute inset-0 bg-black bg-opacity-30" />
           <div className="container mx-auto h-full flex items-center relative z-10">
             <div className="text-white max-w-2xl px-4">
               <h1 className="text-5xl font-bold mb-6">Sabor Autêntico da Verdadeira Pizza Italiana</h1>

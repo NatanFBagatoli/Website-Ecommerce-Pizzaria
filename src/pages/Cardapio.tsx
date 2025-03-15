@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useState, useEffect } from "react"; // Adicionei o useEffect
+import { useState, useEffect } from "react";
 import { Search, X } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { pizzas } from '../constants/pizzas';
@@ -12,7 +12,7 @@ const Cardapio = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<'PIZZAS DOCES' | 'PIZZAS' | null>(null);
-    const [isCategoryMenuOpen, setIsCategoryMenuOpen] = useState(false); // Estado para controlar a visibilidade do menu de categorias
+    const [isCategoryMenuOpen, setIsCategoryMenuOpen] = useState(false); 
 
     const pizzasPerPage = 12;
 
