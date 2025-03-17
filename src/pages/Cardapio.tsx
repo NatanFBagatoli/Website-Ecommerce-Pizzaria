@@ -69,7 +69,7 @@ const Cardapio = () => {
                     }}
                 >
                     <div className="absolute bg-black bg-opacity-50 inset-0 flex items-center justify-center">
-                        <h1 className="rubik-dirt-regular transform hover:scale-105 transition-all text-5xl md:text-7xl font-bold text-white mb-6">NOSSO<span className="text-[#CE372D]"> CARDÁPIO</span></h1>
+                        <h1 className="rubik-dirt-regular transform hover:scale-105 transition-all text-5xl md:text-5xl font-bold text-white mb-6">NOSSO<span className="text-[#CE372D]"> CARDÁPIO</span></h1>
                     </div>
                 </section>
 
@@ -189,14 +189,14 @@ const Cardapio = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {currentPizzas.map((pizza, index) => (
-                            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden relative transform hover:scale-105 transition-all">
+                            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden relative">
                                 {pizza.isNew && (
-                                    <div className="absolute top-4 left-4 bg-[#CE372D] text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    <div className="transform hover:scale-105 transition-all absolute top-4 left-4 bg-[#CE372D] text-white px-3 py-1 rounded-full text-sm font-semibold">
                                        ✨ NOVO
                                     </div>
                                 )}
                                 {pizza.isPopular && (
-                                    <div className="absolute top-4 right-4 bg-[#F4D03F] text-[#602A26] px-3 py-1 rounded-full text-sm font-semibold">
+                                    <div className="transform hover:scale-105 transition-all absolute top-4 right-4 bg-[#F4D03F] text-[#602A26] px-3 py-1 rounded-full text-sm font-semibold">
                                         ⭐ MAIS PEDIDA 
                                     </div>
                                 )}
@@ -207,13 +207,13 @@ const Cardapio = () => {
                                 />
                                 <div className="p-4">
                                     <div className="text-sm text-[#602A26] font-semibold mb-2">{pizza.categoria}</div>
-                                    <h3 className="text-lg text-[#CE372D] font-bold mb-2">{pizza.nome}</h3>
+                                    <h3 className="text-lg text-[#CE372D] font-bold transform hover:scale-105 transition-all duration-300 mb-2">{pizza.nome}</h3>
                                     <p className="text-[#602A26] text-sm mb-4 h-20 overflow-hidden">{pizza.ingredientes}</p>
                                     <div className="flex items-center justify-between">
-                                        <span className="text-[#CE372D] text-xl font-bold">{pizza.preco}</span>
+                                        <span className="text-[#CE372D] transform hover:scale-105 duration-300 transition-all text-xl font-bold">{pizza.preco}</span>
                                         <Link
                                             to="/pedido"
-                                            className="bg-[#CE372D] text-white px-7 py-3 rounded-md hover:bg-[#B32D24] transition-colors"
+                                            className="bg-[#CE372D] text-white px-7 py-3 rounded-md hover:bg-[#B32D24] duration-300 transform hover:scale-105 transition-colors"
                                         >
                                             Pedir
                                         </Link>

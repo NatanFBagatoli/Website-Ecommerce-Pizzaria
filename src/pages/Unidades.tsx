@@ -7,19 +7,30 @@ import { useState } from "react";
 const Unidades = () => {
     const [selectedState, setSelectedState] = useState('');
     const [selectedCity, setSelectedCity] = useState('');
-
     const [currentPage, setCurrentPage] = useState(1);
 
-    const unidadesPerPage = 8;
-    const totalPages = Math.ceil(unidades.length / unidadesPerPage);
+    const filteredUnidades = unidades.filter(unidade => {
+        const matchState = selectedState ? unidade.estado === selectedState : true;
+        const matchCity = selectedCity ? unidade.cidade === selectedCity : true;
+        return matchState && matchCity;
+    });
 
+    const unidadesPerPage = 8;
+    const totalPages = Math.ceil(filteredUnidades.length / unidadesPerPage);
     const indexOfLastUnidades = currentPage * unidadesPerPage;
     const indexOfFirstUnidades = indexOfLastUnidades - unidadesPerPage;
-    const currentUnidades = unidades.slice(indexOfFirstUnidades, indexOfLastUnidades);
+    const currentUnidades = filteredUnidades.slice(indexOfFirstUnidades, indexOfLastUnidades);
 
+    const estadosCidades = {
+        'RS': ['Santa Cruz do Sul'],
+        'SC': ['Blumenau'],
+        'PR': ['Curitiba'],
+    };
 
     const handlePageChange = (page: number) => {
         setCurrentPage(page);
+
+        
     };
 
     return (
@@ -33,48 +44,61 @@ const Unidades = () => {
                     }}
                 >
                     <div className="absolute bg-black bg-opacity-50 inset-0 flex items-center justify-center">
-                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">NOSSAS<span className="text-[#CE372D]"> UNIDADES</span></h1>
+                        <h1 className="text-5xl md:text-7xl rubik-dirt-regular font-bold text-white mb-6">NOSSAS<span className="text-[#CE372D]"> UNIDADES</span></h1>
                     </div>
                 </section>
                 <div className="container mx-auto px-4 py-8">
+                   
                     <div className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto mb-12">
-                        <select
+                    <select
                             value={selectedState}
-                            onChange={(e) => setSelectedState(e.target.value)}
-                            className="flex-1 p-3 border rounded-md bg-white"
+                            onChange={(e) => {
+                                setSelectedState(e.target.value);
+                                setSelectedCity('');
+                            }}
+                            className="transform hover:scale-105 transition-all flex-1 p-2 border rounded-md"
                         >
-                            <option value="">Selecione um estado</option>
-                            <option value="PR">Rio Grande do Sul</option>
+                            <option value="">Selecione um Estado</option>
+                            <option value="RS">Rio Grande do Sul</option>
                             <option value="SC">Santa Catarina</option>
-                            <option value="SP">Paraná</option>
+                            <option value="PR">Paraná</option>
                         </select>
                         <select
                             value={selectedCity}
                             onChange={(e) => setSelectedCity(e.target.value)}
-                            className="flex-1 p-3 border rounded-md bg-white"
+                            className="transform hover:scale-105 transition-all flex-1 p-2 border rounded-md"
+                            disabled={!selectedState}
                         >
-                            <option value="">Selecione uma cidade</option>
-                            <option value="CURITIBA">Santa Cruz do Sul</option>
-                            <option value="FLORIPA">Blumenau</option>
-                            <option value="SP">Curitiba</option>
+                            <option value="">Selecione uma Cidade</option>
+                            {selectedState && estadosCidades[selectedState as keyof typeof estadosCidades].map((cidade, index) => (
+                                <option key={index} value={cidade}>{cidade}</option>
+                            ))}
                         </select>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+
+                  
+                    <div className="flex flex-wrap gap-6 mb-12">
                         {currentUnidades.map((unidade, index) => (
-                            <div key={index} className="transform hover:scale-105 transition-all bg-white rounded-lg shadow-lg overflow-hidden">
-                                <img
-                                    src={unidade.image}
-                                    alt={unidade.name}
-                                    className="w-full h-48 object-cover"
-                                />
-                                <div className="p-4 text-center">
-                                    <h3 className="text-xl text-[#602A26] font-bold">{unidade.name}</h3>
-                                    
+                            <a
+                                key={index}
+                                href={unidade.url}
+                                className="w-[calc(25%-18px)] cursor-pointer"
+                            >
+                                <div className="w-full h-48 overflow-hidden rounded-lg shadow-lg">
+                                    <img
+                                        src={unidade.image}
+                                        alt={unidade.name}
+                                        className="transform hover:scale-105 transition-all w-full h-full object-cover"
+                                    />
                                 </div>
-                                
-                            </div>
+                                <h3 className="text-xl text-[#602A26] mt-2 text-center font-bold">
+                                    {unidade.name}
+                                </h3>
+                            </a>
                         ))}
                     </div>
+
+                  
                     <div className="flex justify-center items-center gap-2 mt-8">
                         <button
                             onClick={() => handlePageChange(currentPage - 1)}
@@ -103,34 +127,36 @@ const Unidades = () => {
                             Próxima
                         </button>
                     </div>
-                    
                 </div>
-                
-                <div
-                    className="w-full h-[450px] bg-cover bg-center relative"
-                    style={{
-                        backgroundImage: 'url("https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")'
-                    }}
-                >
-                    <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
-                            Texto1
-                        </h2>
-                        <p className="text-lg md:text-xl mb-8 text-center">
-                            Texto2
-                        </p>
-                        <Link
-                            to="/seja-franqueado"
-                            className="bg-[#CE372D] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#602A26] transition-colors"
-                        >
-                            Texto3
-                        </Link>
-                    </div>
-                </div>
-            </div>
 
+               
+                <section className="bg-[#ECE5D7]">
+                    <div
+                        className="w-full h-[450px] bg-cover bg-center relative"
+                        style={{
+                            backgroundImage: 'url("https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")'
+                        }}
+                    >
+                        <div className="absolute bg-black bg-opacity-30 inset-0 flex flex-col items-center justify-center text-white">
+                            <h2 className="text-2xl rubik-dirt-regular font-bold mb-4 text-center">
+                                SEJA UM FRANQUIADO BAGATOLI
+                            </h2>
+                            <p className="text-1xl mb-8 text-center">
+                                Faça parte da família Bagatoli e abra a sua franquia com a confiança de uma marca consolidada e mais de 26 anos de experiência. Na Bagatoli, sabemos o que fazer e como fazer para garantir o sucesso do seu negócio.
+                            </p>
+                            <Link
+                                to="/seja-franqueado"
+                                className="bg-[#CE372D] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#602A26] transition-colors"
+                            >
+                                CONHEÇA OS MODELOS DE NEGÓCIO
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+            </div>
             <Footer />
         </div>
-    )
+    );
 };
+
 export default Unidades;
