@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { IoTimerOutline, IoPizzaOutline, IoStorefrontOutline, IoCalendarNumberOutline, IoCaretForwardOutline, IoCaretBackOutline, IoLogoInstagram } from "react-icons/io5";
+import { IoCalendarNumberOutline, IoCaretForwardOutline, IoCaretBackOutline, IoLogoInstagram } from "react-icons/io5";
 import { Store, CircleDollarSign, Pizza } from "lucide-react"
 import { useInView } from "../hooks/useInView";
 import CountUp from "react-countup";
@@ -135,48 +135,50 @@ const Franquiado = () => {
           </div>
         </section>
 
-
-        
         <section className="py-24">
-          <div className="container mx-auto px-4">
-            <div className="text-center">
-              <h1 className="luckiest-guy-regular text-4xl text-[#4A0C08] font-extrabold mb-4">Bagatoli<span className="text-[#CE372D]"> na mídia</span></h1>
-              <p className="text-[#4A0C08] mx-10 mb-4">Confira notícias e reportagens</p>
-              <div className="container mx-138 flex items-center justify-between">
-              <div className="flex space-x-6">
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE1
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE2
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE3
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE4
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE5
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE6
-              </Link>
-              </div>
-              </div>
-              <Link to="/" className='hover:text-gray-200 flex items-center gap-2'>
-                <IoLogoInstagram size={18} />
-              </Link>
-             
-              <Link
-                to="/seja-franqueado"
-                className="bg-[#CE372D] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#602A26] transition-colors"
-              >
-                BOTAO
-              </Link>
-            </div>
-          </div>
-        </section>
+  <div className="container mx-auto px-4">
+    <div className="text-center">
+      <h1 className="luckiest-guy-regular text-4xl text-[#4A0C08] font-extrabold mb-4">
+        Bagatoli<span className="text-[#CE372D]"> na mídia</span>
+      </h1>
+      <p className="text-[#4A0C08] mx-10 mb-4">Confira notícias e reportagens</p>
+      <div className="flex justify-center space-x-6 mb-6">
+        <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
+          REDE1
+        </Link>
+        <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
+          REDE2
+        </Link>
+        <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
+          REDE3
+        </Link>
+        <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
+          REDE4
+        </Link>
+        <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
+          REDE5
+        </Link>
+        <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
+          REDE6
+        </Link>
+      </div>
+
+      <div className="flex justify-center items-center gap-4 mb-6">
+        <Link to="/" className="hover:text-gray-200 flex items-center gap-2">
+          <IoLogoInstagram size={18} />
+        </Link>
+      </div>
+      <div className="flex justify-center">
+        <Link
+          to="/seja-franqueado"
+          className="bg-[#CE372D] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#602A26] transition-colors"
+        >
+          BOTAO
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
         <Footer />
         </div>
     )

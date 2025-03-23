@@ -4,7 +4,7 @@ import Sobrenos from "./pages/Sobrenos";
 import Unidades from "./pages/Unidades";
 import Cardapio from "./pages/Cardapio";
 import Pedido from "./pages/Pedido";
-import Franquiado from "./pages/Franquiado";
+import Franqueado from "./pages/Franqueado";
 import Aguaverde from "./pages/cidades/Aguaverde";
 import Centro from "./pages/cidades/Centro";
 import Fortaleza from "./pages/cidades/Fortaleza";
@@ -22,7 +22,7 @@ function App() {
 <Route path="/unidades" element={<Unidades />} />
 <Route path="/cardapio" element={<Cardapio />} />
 <Route path="/pedido" element={<Pedido />} />
-<Route path="/franquiado" element={<Franquiado />} />
+<Route path="/franqueado" element={<Franqueado />} />
 <Route path="/unidades/aguaverde" element={<Aguaverde />} />
 <Route path="/unidades/centro" element={<Centro />} />
 <Route path="/unidades/fortaleza" element={<Fortaleza />} />

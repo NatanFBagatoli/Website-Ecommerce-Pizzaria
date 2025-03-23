@@ -162,45 +162,49 @@ const Sobrenos = () => {
           </div>
         </section>
         <section className="py-24">
-          <div className="container mx-auto px-4">
-            <div className="text-center">
-              <h1 className="luckiest-guy-regular text-4xl text-[#4A0C08] font-extrabold mb-4">Bagatoli<span className="text-[#CE372D]"> na mídia</span></h1>
-              <p className="text-[#4A0C08] mx-10 mb-4">Confira notícias e reportagens</p>
-              <div className="container mx-138 flex items-center justify-between">
-              <div className="flex space-x-6">
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE1
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE2
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE3
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE4
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE5
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE6
-              </Link>
-              </div>
-              </div>
-              <Link to="/" className='hover:text-gray-200 flex items-center gap-2'>
-                <IoLogoInstagram size={18} />
-              </Link>
-             
-              <Link
-                to="/seja-franqueado"
-                className="bg-[#CE372D] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#602A26] transition-colors"
-              >
-                BOTAO
-              </Link>
-            </div>
-          </div>
-        </section>
+  <div className="container mx-auto px-4">
+    <div className="text-center">
+      <h1 className="luckiest-guy-regular text-4xl text-[#4A0C08] font-extrabold mb-4">
+        Bagatoli<span className="text-[#CE372D]"> na mídia</span>
+      </h1>
+      <p className="text-[#4A0C08] mx-10 mb-4">Confira notícias e reportagens</p>
+      <div className="flex justify-center space-x-6 mb-6">
+        <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
+          REDE1
+        </Link>
+        <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
+          REDE2
+        </Link>
+        <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
+          REDE3
+        </Link>
+        <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
+          REDE4
+        </Link>
+        <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
+          REDE5
+        </Link>
+        <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
+          REDE6
+        </Link>
+      </div>
+
+      <div className="flex justify-center items-center gap-4 mb-6">
+        <Link to="/" className="hover:text-gray-200 flex items-center gap-2">
+          <IoLogoInstagram size={18} />
+        </Link>
+      </div>
+      <div className="flex justify-center">
+        <Link
+          to="/seja-franqueado"
+          className="bg-[#CE372D] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#602A26] transition-colors"
+        >
+          BOTAO
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
         <section className=" bg-[#ECE5D7]">
         <div
           className="w-full h-[450px] bg-cover bg-center relative"
@@ -210,7 +214,7 @@ const Sobrenos = () => {
         >
           <div className="absolute bg-black bg-opacity-30 inset-0 flex flex-col items-center justify-center text-white">
             <h2 className="text-2xl rubik-dirt-regular font-bold mb-4 text-center">
-            SEJA UM FRANQUIADO BAGATOLI
+            SEJA UM FRANQUEADO BAGATOLI
             </h2>
             <p className="text-1xl mb-8 text-center">
             Faça parte da família Bagatoli e abra a sua franquia com a confiança de uma marca consolidada e mais de 26 anos de experiência. Na Bagatoli, sabemos o que fazer e como fazer para garantir o sucesso do seu negócio.

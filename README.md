@@ -18,15 +18,17 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 📷 Demonstração
 
-### 🏫 Página Inicial
+### 🏫 Página Sobre Nós
 
+![sobrenos](https://github.com/user-attachments/assets/27c3e79e-66be-420b-8f79-965115bc89a4)
 
 ### 📚 Página de Unidades
 
+![unidades](https://github.com/user-attachments/assets/5cd66b1e-cca5-4c4d-886f-88585719a95e)
 
 ### 📊 Página de Cardápio
 
-![cardapio](https://github.com/user-attachments/assets/b2ef6ad0-2723-4cd6-9a77-9340b658012a)
+![cardapio](https://github.com/user-attachments/assets/63841769-bae8-408c-97e8-44befcf485b8)
 
 ### 📱 Link para o site
 
@@ -65,8 +67,8 @@ Siga os passos abaixo para rodar o projeto localmente:
 
 ## 📄 Features
 
-- ✅ Estrutura responsiva e moderna
 - ✅ Interface intuitiva e atraente
+- 🔜 Estrutura responsiva e moderna
 - 🔜 Documentação de código
 - 🔜 Correção de bugs
 - 🔜 Melhorias contínuas
