@@ -32,6 +32,8 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ### 📱 Link para o site
 
+https://website-ecommerce-pizzaria.vercel.app/
+
 ---
 
 ## 🔧 Instalação e Uso
