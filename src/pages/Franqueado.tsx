@@ -37,7 +37,7 @@ const Franquiado = () => {
     return(
         <div>
         <Navbar />
-        <section className="h-[750px] bg-cover bg-center relative"
+        <section className="h-[650px] bg-cover bg-center relative"
           style={{
             backgroundImage: 'url("https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")'
           }}>
@@ -96,35 +96,38 @@ const Franquiado = () => {
           </div>
           
         </section>
-        <section className="mt-20 h-[400px] bg-cover bg-center relative mb-20">
-        <p className="pl-[700px] text-[#602A26] text-5xl font-bold mb-4 mx-2 luckiest-guy-regular ">O SUCESSO DA BAGATOLI</p><span className="luckiest-guy-regular pl-[800px] text-[#CE372D] font-bold text-5xl mx-5"> EM NÚMEROS</span>
-          <div className="container absolute bottom-10 left-0 right-0 mx-auto px-4 -mt-16 z-10">
-            <div ref={statsRef} className="grid grid-cols-1 md:grid-cols-4">
-              {status.map((stat, index) => (
-                <div key={index} className="rounded-xl text-center transform hover:scale-105 transition-all">
-                  <stat.icon className="w-24 h-24 text-[#4A0C08] mx-auto mb-4" />
-                  <h3 className="text-5xl text-[#CE372D] font-bold mb-2">
-                    <span className="text-1xl inline-flex">
-                      {statsInView && (
-                        <CountUp
-                          start={0}
-                          end={stat.number}
-                          duration={2.5}
-                          separator="."
-                          prefix={stat.prefix}
-                          useEasing={true}
-                        />
-                      )}
-                    </span>
-                  </h3>
-                  <p>{stat.text}</p>
-                </div>
-              ))}
+        <div className="flex flex-col items-center mt-12 md:mt-16 lg:mt-20">
+              <p className="text-2xl sm:text-3xl md:text-4xl text-[#602A26] font-bold mb-2 luckiest-guy-regular">O SUCESSO DA BAGATOLI</p>
+              <span className="luckiest-guy-regular text-[#CE372D] font-bold text-2xl sm:text-3xl md:text-4xl">EM NÚMEROS</span>
             </div>
             
+            <div className="mt-8 md:mt-12 lg:mt-16">
+              <div ref={statsRef} className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+                {status.map((stat, index) => (
+                  <div key={index} className="rounded-xl p-2 sm:p-4 text-center transform hover:scale-105 transition-all">
+                    <stat.icon className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#4A0C08] mx-auto mb-2 sm:mb-4" />
+                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl text-[#CE372D] font-bold mb-1 sm:mb-2">
+                      <span className="inline-flex">
+                        {statsInView && (
+                          <CountUp
+                            start={0}
+                            end={stat.number}
+                            duration={2.5}
+                            separator="."
+                            prefix={stat.prefix}
+                            useEasing={true}
+                          />
+                        )}
+                      </span>
+                    </h3>
+                    <p className="text-xs sm:text-sm md:text-base">{stat.text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            </section>
-            <section className="py-24 bg-[#ECE5D7]">
+         
+        
+            <section className="py-24 bg-[#F4EDDF]">
           <div className="container mx-auto px-4">
             <div className="text-center">
               <p className="text-[#4A0C08] mx-10 mb-4">Nossos prêmios</p>
@@ -134,7 +137,18 @@ const Franquiado = () => {
             </div>
           </div>
         </section>
-
+        <section className="py-24 bg-[#FFFAF0]">
+          <div className="container mx-auto px-4">
+            <div className="text-center">
+              <p className="text-[#4A0C08] mx-10 mb-4">Nosso modelo de negócio</p>
+              <h1 className="luckiest-guy-regular text-4xl text-[#4A0C08] font-extrabold mb-4">Bagatoli<span className="text-[#CE372D]"> Pizzaria</span></h1>
+              <p className="text-[#4A0C08] mx-10 mb-4">"Experiência
+              e evolução"</p>
+              <p className="text-[#4A0C08] mx-10 mb-4">Nosso modelo de negócio é o resultado de mais de 26 anos de experiência, evoluindo constantemente para acompanhar as tendências e exigências do mercado. Essa longa trajetória nos permite oferecer uma experiência excepcional, sustentado por um profundo conhecimento e aprendizados ao longo do caminho.</p>
+                <p className="text-[#4A0C08] mx-10 mb-4">Modelo do negócio</p>
+            </div>
+          </div>
+        </section>
         <section className="py-24">
   <div className="container mx-auto px-4">
     <div className="text-center">
