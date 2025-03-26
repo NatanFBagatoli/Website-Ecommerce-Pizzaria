@@ -63,7 +63,6 @@ const Cardapio = () => {
         <div className="flex flex-col min-h-screen">
             <Navbar />
             <main className="flex-grow bg-[#FFFAF0]">
-                {/* Hero Section */}
                 <section
                     className="h-[250px] sm:h-[300px] md:h-[350px] bg-cover bg-center relative"
                     style={{
@@ -76,10 +75,7 @@ const Cardapio = () => {
                         </h1>
                     </div>
                 </section>
-
-                {/* Main Content */}
                 <div className="container mx-auto px-4 sm:px-6 py-6 md:py-8">
-                    {/* Location Filters */}
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-2xl mx-auto mb-8 md:mb-12">
                         <select
                             value={selectedState}
@@ -110,8 +106,6 @@ const Cardapio = () => {
                             ))}
                         </select>
                     </div>
-
-                    {/* Filters Section */}
                     <div className="flex flex-col md:flex-row items-center gap-3 sm:gap-4 mb-6 md:mb-8 relative">
                         <button
                             onClick={() => {
@@ -207,8 +201,6 @@ const Cardapio = () => {
                             <Search className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
                         </div>
                     </div>
-
-                    {/* Pizza Grid */}
                     {currentPizzas.length > 0 ? (
                         <>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
@@ -246,8 +238,6 @@ const Cardapio = () => {
                                     </div>
                                 ))}
                             </div>
-
-                            {/* Pagination */}
                             {totalPages > 1 && (
                                 <div className="flex justify-center items-center gap-1 sm:gap-2 mt-6 sm:mt-8">
                                     <button

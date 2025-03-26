@@ -36,7 +36,6 @@ const Unidades = () => {
         <div className="flex flex-col min-h-screen">
             <Navbar />
             <div className="flex-grow bg-[#FFFAF0]">
-                {/* Hero Section */}
                 <section
                     className="h-[200px] sm:h-[300px] md:h-[350px] bg-cover bg-center relative"
                     style={{
@@ -49,10 +48,7 @@ const Unidades = () => {
                         </h1>
                     </div>
                 </section>
-
-                {/* Main Content */}
                 <div className="container mx-auto px-4 sm:px-6 py-8">
-                    {/* Filters */}
                     <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto mb-8 sm:mb-12">
                         <select
                             value={selectedState}
@@ -83,8 +79,6 @@ const Unidades = () => {
                             ))}
                         </select>
                     </div>
-
-                    {/* Units Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8 sm:mb-12">
                         {currentUnidades.map((unidade, index) => (
                             <a
@@ -105,8 +99,6 @@ const Unidades = () => {
                             </a>
                         ))}
                     </div>
-
-                    {/* Pagination */}
                     {totalPages > 1 && (
                         <div className="flex flex-wrap justify-center items-center gap-2 mt-8">
                             <button
@@ -138,8 +130,6 @@ const Unidades = () => {
                         </div>
                     )}
                 </div>
-
-                {/* Franchise Section */}
                 <section className="bg-[#ECE5D7]">
                     <div
                         className="w-full h-[300px] sm:h-[400px] md:h-[450px] bg-cover bg-center relative"

@@ -31,7 +31,6 @@ const Home = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow bg-white">
-        {/* Hero Section */}
         <section className="h-screen max-h-[800px] bg-cover bg-center relative"
           style={{
             backgroundImage: 'url("https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")'
@@ -49,8 +48,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-        
-        {/* Work With Us Section */}
         <section className="py-12 md:py-24 bg-[#ECE5D7]">
           <div className="container mx-auto px-4">
             <div className="w-full h-[300px] md:h-[450px] bg-cover bg-center relative rounded-lg md:rounded-3xl"
@@ -74,8 +71,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-        
-        {/* Franchise Section */}
         <section className="py-12 md:py-24 bg-[#ECE5D7]">
           <div className="container mx-auto px-4">
             <div className="w-full h-[300px] md:h-[450px] bg-cover bg-center relative rounded-lg md:rounded-3xl"
@@ -99,8 +94,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        {/* Units Section */}
         <div className="container mx-auto px-4 py-8 md:py-12">
           <div className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto mb-8 md:mb-12">
             <select
@@ -179,8 +172,6 @@ const Home = () => {
             </button>
           </div>
         </div>
-
-        {/* Franchise Opportunity Section */}
         <section className="bg-[#ECE5D7]">
           <div
             className="w-full h-[300px] md:h-[450px] bg-cover bg-center relative"
@@ -204,8 +195,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        {/* Media Section */}
         <section className="py-12 md:py-24">
           <div className="container mx-auto px-4">
             <div className="text-center">
