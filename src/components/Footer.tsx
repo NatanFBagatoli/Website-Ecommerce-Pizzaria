@@ -77,6 +77,7 @@ const Footer = () => {
       <div className="bg-[#CE372D] py-2 md:py-3 landscape:py-1.5">
         <p className="text-white text-center text-xxs xs:text-xs sm:text-sm md:text-base 
                      landscape:text-xxs landscape:xs:text-xs landscape:sm:text-xs">
+                      
           © 2025 Bagatoli Pizzaria Ltda. Todos os direitos reservados.
         </p>
       </div>

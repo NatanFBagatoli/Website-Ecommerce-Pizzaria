@@ -13,7 +13,9 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-50">
       <header className="bg-[#CE372D] text-white py-3 px-4">
+        
         <div className="container mx-auto flex justify-center space-x-6 items-center">
+          
           <a href="https://www.linkedin.com/in/natan-bagatoli/" className="hover:text-gray-200 ">
             <IoLogoLinkedin size={18} />
           </a>
