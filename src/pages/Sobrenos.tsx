@@ -1,11 +1,11 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import CountUp from "react-countup";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { IoTimerOutline, IoPizzaOutline, IoStorefrontOutline, IoCalendarNumberOutline, IoCaretForwardOutline, IoCaretBackOutline, IoLogoInstagram } from "react-icons/io5";
-import { Store, CircleDollarSign, Pizza } from "lucide-react"
+import { IoLogoLinkedin, IoLogoInstagram, IoLogoGithub, IoLogoWhatsapp, IoTimerOutline, IoPizzaOutline, IoStorefrontOutline, IoCalendarNumberOutline, IoCaretForwardOutline, IoCaretBackOutline } from "react-icons/io5";
+import { Store, CircleDollarSign, Pizza, Mail } from "lucide-react"
 import { useInView } from "../hooks/useInView";
-import CountUp from "react-countup";
 import { useState } from 'react';
 import { slides } from "../constants/slides";
 
@@ -169,44 +169,45 @@ const Sobrenos = () => {
             </div>
           </div>
         </section>
-
-        <section className="py-12 md:py-16 lg:py-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="luckiest-guy-regular text-2xl sm:text-3xl md:text-4xl text-[#4A0C08] font-extrabold mb-4">
-                Bagatoli<span className="text-[#CE372D]"> na mídia</span>
-              </h1>
-              <p className="text-[#4A0C08] mb-6">Confira notícias e reportagens</p>
-              
-              <div className="flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-6 mb-6">
-                {[1, 2, 3, 4, 5, 6].map((item) => (
-                  <Link 
-                    key={item} 
-                    to="/sobrenos" 
-                    className="text-sm sm:text-base text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors px-2 sm:px-3"
-                  >
-                    REDE{item}
-                  </Link>
-                ))}
-              </div>
-
-              <div className="flex justify-center items-center gap-4 mb-6">
-                <Link to="/" className="hover:text-gray-600 flex items-center gap-2">
-                  <IoLogoInstagram size={20} className="text-[#602A26] hover:text-[#CE372D]" />
-                </Link>
-              </div>
-              
-              <div className="flex justify-center">
-                <Link
-                  to="/seja-franqueado"
-                  className="bg-[#CE372D] text-white px-6 py-2 sm:px-8 sm:py-3 rounded-md font-semibold hover:bg-[#602A26] transition-colors text-sm sm:text-base"
-                >
-                  BOTAO
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <section className="py-12 md:py-24">
+                  <div className="container mx-auto px-4">
+                    <div className="text-center">
+                      <h1 className="luckiest-guy-regular text-3xl md:text-4xl text-[#4A0C08] font-extrabold mb-3 md:mb-4">
+                        Bagatoli<span className="text-[#CE372D]"> na mídia</span></h1>
+                      <p className="text-[#4A0C08] mb-4 md:mb-6">Confira notícias e reportagens</p>
+                      <div className="flex flex-wrap justify-center gap-3 md:gap-6 mb-4 md:mb-6">
+                        <a href="https://www.linkedin.com/in/natan-bagatoli/" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors flex items-center gap-2">
+                          <IoLogoLinkedin size={18} />
+                          Linkedin
+                        </a>
+                        <a href="https://github.com/NatanFBagatoli" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors flex items-center gap-2">
+                          <IoLogoGithub size={18} />
+                          GitHub
+                        </a>
+                        <a href="https://wa.me/47991578819" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors flex items-center gap-2">
+                          <IoLogoWhatsapp size={18} />
+                          Whatsapp
+                        </a>
+                        <a href="mailto:natanfbagatoli@gmail.com" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors flex items-center gap-2">
+                          <Mail size={18} />
+                          Email
+                        </a>
+                      </div>
+                      <div className="max-w-4xl mx-auto mt-6 md:mt-8 landscape:mt-4 pt-4 md:pt-6 landscape:pt-3 border-t-2 border-[#D2BEB6]"></div>
+                      <div className="flex flex-wrap justify-center gap-3 md:gap-6 mb-4 md:mb-6">
+                        <a href="https://www.instagram.com/_nayytan/" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors flex items-center gap-2">
+                          <IoLogoInstagram size={18} />
+                          Instagram
+                        </a>
+                        <a href="https://www.instagram.com/_nayytan/"
+                          className="bg-[#CE372D] text-white px-6 py-2 md:px-8 md:py-3 rounded-md font-semibold hover:bg-[#602A26] transition-colors text-sm md:text-base"
+                        >
+                          @BagatoliPizzaria
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </section>
         <section className="bg-[#ECE5D7]">
           <div className="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] bg-cover bg-center relative"
             style={{

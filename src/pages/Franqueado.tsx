@@ -1,13 +1,13 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import { IoTimeOutline, IoAlertCircleOutline, IoBarChartOutline, IoCashOutline, IoCalendarNumberOutline, IoCaretForwardOutline, IoCaretBackOutline, IoLogoInstagram } from "react-icons/io5";
-import { Store, CircleDollarSign, Pizza } from "lucide-react"
-import { useInView } from "../hooks/useInView";
 import CountUp from "react-countup";
+import { motion, AnimatePresence } from "framer-motion";
+import { IoTimeOutline, IoAlertCircleOutline, IoBarChartOutline, IoCashOutline, IoCalendarNumberOutline, IoCaretForwardOutline, IoCaretBackOutline, IoLogoLinkedin, IoLogoInstagram, IoLogoGithub, IoLogoWhatsapp } from "react-icons/io5";
+import { Store, CircleDollarSign, Pizza, Mail } from "lucide-react"
+import { useInView } from "../hooks/useInView";
 import { useState } from 'react';
 import { slides } from "../constants/slides";
+import { Link } from "react-router-dom";
 
 const Franquiado = () => {
   const [statsRef, statsInView] = useInView({
@@ -21,25 +21,25 @@ const Franquiado = () => {
     { icon: Pizza, number: 57, text: "Itens no cardápio", prefix: "+" }
   ];
   const investmentStats = [
-    { 
-      icon: IoCashOutline, 
-      title: "INVESTIMENTO INICIAL", 
-      description: "entre 750 mil e 950 mil" 
+    {
+      icon: IoCashOutline,
+      title: "INVESTIMENTO INICIAL",
+      description: "entre 750 mil e 950 mil"
     },
-    { 
-      icon: IoBarChartOutline, 
-      title: "FUNDO DE MARKETING", 
-      description: "1,5% do faturamento bruto mensal" 
+    {
+      icon: IoBarChartOutline,
+      title: "FUNDO DE MARKETING",
+      description: "1,5% do faturamento bruto mensal"
     },
-    { 
-      icon: IoAlertCircleOutline, 
-      title: "ROYALTIES", 
-      description: "5% do faturamento bruto mensal" 
+    {
+      icon: IoAlertCircleOutline,
+      title: "ROYALTIES",
+      description: "5% do faturamento bruto mensal"
     },
-    { 
-      icon: IoTimeOutline, 
-      title: "PRAZO DE RETORNO", 
-      description: "entre 24 e 30 meses" 
+    {
+      icon: IoTimeOutline,
+      title: "PRAZO DE RETORNO",
+      description: "entre 24 e 30 meses"
     }
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -158,62 +158,58 @@ const Franquiado = () => {
         </div>
       </section>
       <section className="py-12 md:py-24 bg-[#FDF7F0]">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-12">
-      <h2 className="text-[#602A26] text-lg md:text-xl font-medium mb-4">
-        Nosso Modelo de Negócio
-      </h2>
-      <h1 className="luckiest-guy-regular text-4xl md:text-5xl font-bold mb-6 text-[#4A0C08]">
-        <span className="text-[#CE372D]">PIZZARIA<span className="text-[#164615]"> BAGATOLI</span></span>
-      </h1>
-    </div>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-[#602A26] text-lg md:text-xl font-medium mb-4">
+              Nosso Modelo de Negócio
+            </h2>
+            <h1 className="luckiest-guy-regular text-4xl md:text-5xl font-bold mb-6 text-[#4A0C08]">
+              <span className="text-[#CE372D]">PIZZARIA<span className="text-[#164615]"> BAGATOLI</span></span>
+            </h1>
+          </div>
 
-    <div className="mb-16">
-      <div className="flex flex-col md:flex-row md:items-center md:gap-8">
-        <h3 className="luckiest-guy-regular text-2xl md:text-3xl font-bold text-[#4A0C08] mb-4 md:mb-0 md:w-1/3">
-          Experiência<br />e Evolução
-        </h3>
-        <p className="text-[#4A0C08] md:w-5/5">
-          Nosso modelo de negócio é o resultado de mais de 26 anos de experiência, evoluindo constantemente para acompanhar as tendências e exigências do mercado. Essa longa trajetória nos permite oferecer uma experiência excepcional, sustentado por um profundo conhecimento e aprendizados ao longo do caminho.
-        </p>
-      </div>
-    </div>
-
-    <h3 className="luckiest-guy-regular text-2xl md:text-3xl font-bold text-[#4A0C08] text-center mb-8">
-      Modelo de Negócio
-    </h3>
-
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-[#FEF3E3] rounded-3xl p-8">
-      <div className="space-y-4">
-        <h4 className="luckiest-guy-regular text-xl font-bold text-[#CE372D]">
-          Unidades com Salão Acolhedor
-        </h4>
-        <p className="text-[#4A0C08]">
-          Nossas unidades possuem salões com capacidade para acomodar entre 8 e 12 mesas, atendendo aproximadamente 40 pessoas. Este ambiente agradável e acolhedor representa cerca de <span className="font-bold">25% do total de nossas vendas</span>, proporcionando uma experiência única para os clientes que preferem desfrutar de suas refeições no local.
-        </p>
-      </div>
-
-      <div className="space-y-4">
-        <h4 className="luckiest-guy-regular text-xl font-bold text-[#CE372D]">
-          Foco no Delivery
-        </h4>
-        <p className="text-[#4A0C08]">
-          Delivery é o principal motor de nossas operações, respondendo por aproximadamente <span className="font-bold">60% do volume total de vendas</span>. Nossa operação de entrega é eficiente e rápida, garantindo que a pizza chegue sempre quente e saborosa na casa dos nossos clientes.
-        </p>
-      </div>
-
-      <div className="space-y-4">
-        <h4 className="luckiest-guy-regular text-xl font-bold text-[#CE372D]">
-          Atendimento de Balcão Ágil
-        </h4>
-        <p className="text-[#4A0C08]">
-          Oferecemos um serviço de balcão rápido e ágil, ideal para clientes que estão em movimento. Este atendimento prático e eficiente representa cerca de <span className="font-bold">15% das vendas de cada unidade</span>, proporcionando conveniência sem comprometer a qualidade.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<section className="py-12 md:py-8 bg-[#FDF7F0]">
+          <div className="mb-16">
+            <div className="flex flex-col md:flex-row md:items-center md:gap-8">
+              <h3 className="luckiest-guy-regular text-2xl md:text-3xl font-bold text-[#4A0C08] mb-4 md:mb-0 md:w-1/3">
+                Experiência<br />e Evolução
+              </h3>
+              <p className="text-[#4A0C08] md:w-5/5">
+                Nosso modelo de negócio é o resultado de mais de 26 anos de experiência, evoluindo constantemente para acompanhar as tendências e exigências do mercado. Essa longa trajetória nos permite oferecer uma experiência excepcional, sustentado por um profundo conhecimento e aprendizados ao longo do caminho.
+              </p>
+            </div>
+          </div>
+          <h3 className="luckiest-guy-regular text-2xl md:text-3xl font-bold text-[#4A0C08] text-center mb-8">
+            Modelo de Negócio
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-[#FEF3E3] rounded-3xl p-8">
+            <div className="space-y-4">
+              <h4 className="luckiest-guy-regular text-xl font-bold text-[#CE372D]">
+                Unidades com Salão Acolhedor
+              </h4>
+              <p className="text-[#4A0C08]">
+                Nossas unidades possuem salões com capacidade para acomodar entre 8 e 12 mesas, atendendo aproximadamente 40 pessoas. Este ambiente agradável e acolhedor representa cerca de <span className="font-bold">25% do total de nossas vendas</span>, proporcionando uma experiência única para os clientes que preferem desfrutar de suas refeições no local.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h4 className="luckiest-guy-regular text-xl font-bold text-[#CE372D]">
+                Foco no Delivery
+              </h4>
+              <p className="text-[#4A0C08]">
+                Delivery é o principal motor de nossas operações, respondendo por aproximadamente <span className="font-bold">60% do volume total de vendas</span>. Nossa operação de entrega é eficiente e rápida, garantindo que a pizza chegue sempre quente e saborosa na casa dos nossos clientes.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h4 className="luckiest-guy-regular text-xl font-bold text-[#CE372D]">
+                Atendimento de Balcão Ágil
+              </h4>
+              <p className="text-[#4A0C08]">
+                Oferecemos um serviço de balcão rápido e ágil, ideal para clientes que estão em movimento. Este atendimento prático e eficiente representa cerca de <span className="font-bold">15% das vendas de cada unidade</span>, proporcionando conveniência sem comprometer a qualidade.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-12 md:py-8 bg-[#FDF7F0]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {investmentStats.map((stat, index) => (
@@ -228,46 +224,115 @@ const Franquiado = () => {
           </div>
         </div>
       </section>
-      <section className="py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="luckiest-guy-regular text-4xl text-[#602A26] font-extrabold mb-4">
-              Bagatoli<span className="text-[#CE372D]"> na mídia</span>
-            </h1>
-            <p className="text-[#4A0C08] mx-10 mb-4">Confira notícias e reportagens</p>
-            <div className="flex justify-center space-x-6 mb-6">
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE1
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE2
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE3
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE4
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE5
-              </Link>
-              <Link to="/sobrenos" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors">
-                REDE6
-              </Link>
-            </div>
-
-            <div className="flex justify-center items-center gap-4 mb-6">
-              <Link to="/" className="hover:text-gray-200 flex items-center gap-2">
-                <IoLogoInstagram size={18} />
-              </Link>
-            </div>
-            <div className="flex justify-center">
+      <section className="bg-white py-12 md:py-24 relative">
+  <div className="container mx-auto flex justify-center relative">
+    <img
+      src="/src/assets/toalha.webp"
+      alt="Toalha"
+      className="w-[1500px] h-[1000px]"
+    />
+    <div className="absolute inset-0 flex flex-col items-center text-center  px-4">
+      <p className="text-2xl md:text-2xl text-white">Nossos diferenciais</p>
+      <h1 className="text-2xl md:text-4xl font-bold text-white mb-8">
+        Quais as<span className="text-[#F9BB73]"> vantagens</span> de ser um
+        <p>franqueado Bagatoli?</p>
+      </h1>
+      <div className="flex flex-col justify-center h-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-4xl">
+          <div className="bg-[#FFF1D7] px-6 py-4 rounded-md text-left h-[160px] md:h-[120px] w-[400px] md-w-[200px]">
+          <img src="/src/assets/prato.png" alt="Prato"className="inline-block w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 mr-2 max-w-full h-auto" />
+            <p>Com mais de 26 anos de experiência, aprendemos não só o que fazer, mas também a melhor forma de fazer.</p>
+          </div>
+          <div className="bg-[#FFF1D7] px-6 py-4 rounded-md text-left h-[180px] md:h-[120px]">
+          <img src="/src/assets/prato.png" alt="Prato"className="inline-block w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 mr-2 max-w-full h-auto" />
+            <p>Múltiplos canais de venda, incluindo salão acolhedor, atendimento rápido de balcão, e delivery eficiente, com pedidos via aplicativo e site.</p>
+          </div>
+          <div className="bg-[#FFF1D7] px-6 py-4 rounded-md text-left h-[180px] md:h-[120px] w-[350px] md-w-[200px]">
+          <img src="/src/assets/prato.png" alt="Prato"className="inline-block w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 mr-2 max-w-full h-auto" />
+            <p>Treinamento e suporte integral aos franqueados, desde a escolha do ponto comercial até a inauguração e operação diária da unidade.</p>
+          </div>
+          <div className="bg-[#FFF1D7] px-6 py-4 rounded-md text-left h-[180px] md:h-[120px] w-[600px] md-w-[200px]">
+            <p>
+            Modelo de negócio testado e comprovado, com processos otimizados e estratégias para atingir alta lucratividade e um retorno rápido sobre o investimento.
+            </p>
+            <img src="/src/assets/prato.png" alt="Prato"className="inline-block w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 mr-2 max-w-full h-auto" />
+          </div>
+          <div className="bg-[#FFF1D7] px-6 py-4 rounded-md text-left h-[140px] md:h-[120px]">
+          <img src="/src/assets/prato.png" alt="Prato"className="inline-block w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 mr-2 max-w-full h-auto" />
+            <p>Marketing e publicidade eficientes, com campanhas regionais e nacionais para aumentar a visibilidade da marca e atrair mais clientes.</p>
+          </div>
+          <div className="bg-[#FFF1D7] px-6 py-4 rounded-md text-nowrap h-[100px] md:h-[120px] w-[400px] md-w-[200px]">
+            <p>
+            Marca consolidada e respeitada no mercado.
+            </p>
+            <img src="/src/assets/prato.png" alt="Prato"className="items-center inline-block w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+     <section className="bg-[#ECE5D7]">
+          <div
+            className="w-full h-[350px] md:h-[800px] bg-cover bg-center relative"
+            style={{
+              backgroundImage: 'url("https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")'
+            }}
+          >
+            <div className="absolute bg-black bg-opacity-30 inset-0 flex flex-col items-center justify-center text-white p-6 text-center">
+            <h2 className="text-sm md:text-base max-w-md mb-4 md:max-w-2xl">
+            SEJA UM FRANQUEADO
+              </h2>
+              <h1 className="text-xl md:text-4xl rubik-dirt-regular font-bold mb-3 md:mb-4">
+                CRESÇA COM A BAGATOLI
+              </h1>
+              <p className="text-sm md:text-base mb-6 md:mb-8 max-w-md md:max-w-2xl">
+              Com 26 anos de experiência, oferecemos o suporte e o know-how necessários para você abrir a sua própria unidade Baggio. Venha fazer parte da nossa família e compartilhe este sucesso!
+              </p>
               <Link
                 to="/seja-franqueado"
-                className="bg-[#CE372D] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#602A26] transition-colors"
+                className="bg-[#CE372D] text-white px-6 py-2 md:px-8 md:py-3 rounded-md font-semibold hover:bg-[#602A26] transition-colors text-sm md:text-base"
               >
-                BOTAO
+                SEJA UM FRANQUEADO
               </Link>
+            </div>
+          </div>
+        </section>
+      <section className="py-12 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="luckiest-guy-regular text-3xl md:text-4xl text-[#4A0C08] font-extrabold mb-3 md:mb-4">
+              Bagatoli<span className="text-[#CE372D]"> na mídia</span></h1>
+            <p className="text-[#4A0C08] mb-4 md:mb-6">Confira notícias e reportagens</p>
+            <div className="flex flex-wrap justify-center gap-3 md:gap-6 mb-4 md:mb-6">
+              <a href="https://www.linkedin.com/in/natan-bagatoli/" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors flex items-center gap-2">
+                <IoLogoLinkedin size={18} />
+                Linkedin
+              </a>
+              <a href="https://github.com/NatanFBagatoli" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors flex items-center gap-2">
+                <IoLogoGithub size={18} />
+                GitHub
+              </a>
+              <a href="https://wa.me/47991578819" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors flex items-center gap-2">
+                <IoLogoWhatsapp size={18} />
+                Whatsapp
+              </a>
+              <a href="mailto:natanfbagatoli@gmail.com" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors flex items-center gap-2">
+                <Mail size={18} />
+                Email
+              </a>
+            </div>
+            <div className="max-w-4xl mx-auto mt-6 md:mt-8 landscape:mt-4 pt-4 md:pt-6 landscape:pt-3 border-t-2 border-[#D2BEB6]"></div>
+            <div className="flex flex-wrap justify-center gap-3 md:gap-6 mb-4 md:mb-6">
+              <a href="https://www.instagram.com/_nayytan/" className="text-[#602A26] hover:text-[#CE372D] font-semibold transition-colors flex items-center gap-2">
+                <IoLogoInstagram size={18} />
+                Instagram
+              </a>
+              <a href="https://www.instagram.com/_nayytan/"
+                className="bg-[#CE372D] text-white px-6 py-2 md:px-8 md:py-3 rounded-md font-semibold hover:bg-[#602A26] transition-colors text-sm md:text-base"
+              >
+                @BagatoliPizzaria
+              </a>
             </div>
           </div>
         </div>
