@@ -32,40 +32,6 @@ Este projeto foi desenvolvido com as seguintes tecnologias e ferramentas:
 
 ---
 
-## 🔧 Instalação e Uso
-
-Siga os passos abaixo para rodar o projeto localmente:
-
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   ```
-
-2. **Acesse a pasta do projeto:**
-   ```bash
-   cd nome-do-repositorio
-   ```
-
-3. **Instale as dependências:**
-   ```bash
-   npm install
-   ```
-   ou
-   ```bash
-   yarn install
-   ```
-
-4. **Inicie o servidor de desenvolvimento:**
-   ```bash
-   npm run dev
-   ```
-   ou
-   ```bash
-   yarn dev
-   ```
-
----
-
 ## 📄 Funcionalidades
 
 - ✅ **Interface intuitiva e atraente**: Design moderno e fácil de usar
