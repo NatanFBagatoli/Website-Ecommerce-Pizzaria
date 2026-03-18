@@ -107,4 +107,4 @@ Se tiver dúvidas ou sugestões, entre em contato:
 
 ---
 
-Esperamos que você aproveite o projeto! 🍕
+Espero que você aproveite o projeto! 🍕
